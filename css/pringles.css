@@ -1,0 +1,257 @@
+/* start variables */
+:root {
+  --main-color: #ce1212;
+}
+/* end variables */ 
+/* spicial text */
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+/* Start global rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth
+}
+body {
+  font-family: "Cairo", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  padding-left:15px ;
+  padding-right:15px ;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small Screens*/
+@media (min-width: 768px) {
+  .container {
+    width:750px ;
+  }
+}
+/* Mediem Screens */
+  @media (min-width: 992px) {
+  .container {
+    width:970px ;
+  }
+}
+/* Large Screens */
+@media (min-width: 1200px) {
+  .container {
+    width:1170px ;
+  }
+}
+/* End global rules */
+/* Start header  */ 
+header {
+  background: #fff;
+  height: 60px;
+  border-bottom: 1px solid #fff;
+  margin-top: 10px;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+nav a {
+  font-size: 18px;
+  font-weight: 700;
+  color: #7f7f90;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 30px;
+  height: 60px;
+  overflow: hidden;
+}
+@media (max-width:991px) {
+  nav a {
+    padding: 0 10px;
+    font-size: 9px;
+  }
+}
+header li a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: var(--main-color);
+  bottom: 0;
+  left: -100%;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+nav a:hover {
+  color: black;
+  background-color: #fafafa;
+}
+nav a:hover::before {
+  left: 0;
+}
+header img {
+  height: 60px;
+}
+/* End header  */ 
+/* start landing  */
+.landing {
+  background-color: #eee;
+  height: calc(100vh - 60px);
+  width: 100%;
+}
+.landing .container {
+  height: calc(100vh - 60px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width:991px) {
+  .landing .container {
+  flex-direction: column-reverse;
+  }
+}
+.landing .container .text {
+  max-width: 600px;
+  padding-bottom:  100px;
+}
+.landing .container .text h1 {
+  text-transform: uppercase;
+  margin: 0;
+  text-align: center;
+  color: var(--main-color);
+  font-size: 75px;
+}
+.landing .container .text h3 {
+  margin: 0;
+  text-align: center;
+  font-size: 25px;
+  padding: 10px ;
+  text-transform: capitalize;
+}
+.landing .container .text p  {
+  line-height: 2;
+  color: #777;
+  font-weight: normal;
+  text-align: center;
+}
+.landing img {
+  max-width: 100%;
+  width: 400px;
+  height: 400px;
+}
+@media (max-width:991px) {
+  .landing img {
+    width: 300px;
+    height: 300px;
+    margin-top: 50px;
+  } 
+}
+/* end landing  */
+/* start services  */
+.services {
+  background-color: white;
+  padding-top:100px ;
+}
+.services .container {
+  padding-top:50px ;
+  padding-bottom:50px ;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+  gap: 30px;
+}
+.services h2 {
+  text-align: center;
+  font-size: 13px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  color: #7f7f90;
+  text-transform: uppercase;
+}
+.services .intro-text {
+  text-align: center;
+  margin: 0;
+  font-size: 48px;
+  font-weight: 400;
+  font-family: "Amatic SC", sans-serif;
+}
+.services span {
+  color:var(--main-color);
+}
+.services .container .box {
+  text-align: center;
+}
+/* the images that i found it are not the same hieght and width so i had to adjust it them by my self 
+start*/
+.services .container .box img {
+  height: 230px;
+}
+.services .container .one img {
+  margin: 0 80px 15px;
+}
+.services .container .two img {
+  margin: 0 85px;
+  height: 245px;
+}
+.services .container .three img {
+  margin: 0 15px 15px;
+}
+.services .container .four img {
+  margin: 0 85px 15px;
+}
+.services .container .five img,
+.services .container .six img,
+.services .container .seven img,
+.services .container .eight img {
+  margin: 0 15px 15px;
+}
+/* end */
+.services .box h4 {
+  font-size: 22px;
+  font-weight: 500;
+  color: #37373f;
+  font-family: "Inter", sans-serif;
+  font-weight: 30px;
+  margin-bottom: 5px;
+}
+.services .box p {
+  color: #777;
+  margin-bottom: 5px;
+}
+.services .box span {
+  font-size: 24px;
+  font-weight: 700;
+  color:var(--main-color);
+  margin-top:10px ;
+}
+/* end services  */
+/* start footer */
+.footer {
+  background-color: var(--main-color);
+  color: white;
+  padding: 30px 10px;
+  text-align: center;
+  font-size: 18px;
+}
+.footer span {
+  text-transform: capitalize;
+  font-weight: bold;
+  color: rgb(0 0 0 / 60%);
+}
+/* end footer */
